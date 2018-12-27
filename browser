@@ -17,6 +17,6 @@ my $delimiter = " ";
 while (<$FILE>) {
 	my ($regex, $handler) = $_ =~ /(.+?)$delimiter(.*)/;
 	if (my @args = $target =~ /$regex/) {
-		exec "echo '$handler' | sh /dev/stdin " . join(" ", @args);
+		exec "echo '$handler' | sh -s " . join(" ", @args);
 	}
 }
