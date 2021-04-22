@@ -16,7 +16,7 @@ configurable way.
 
 ```
 (magnet:.*)                             transmission-remote -a "$1"
-(https://(www.)youtube.com/watch\?v=.*) mpv "$1"
+(https://(?:www\.)?youtube.com/watch\?v=.*) mpv "$1"
 (https?://?.*)                          w3m "$1"
 ```
 

@@ -1,5 +1,5 @@
 (magnet:.*)                             tremc "$1"
 (.*.torrent)                            tremc "$1"
-(https://(www.)youtube.com/watch\?v=.*) mpv "$1"
+(https://(?:www\.)?youtube.com/watch\?v=.*) mpv "$1"
 (https?://?.*)                          w3m -o confirm_q=False "$1"
 (git://.*\.git)                         git clone --recursive "$1"
